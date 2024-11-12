@@ -7,9 +7,9 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @Component
 @ApplicationScope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class ApplicationData {
-	private int count;
+	private Integer count=0;
 
-	public int getCount() {
+	public Integer getCount() {
 		return count;
 	}
 

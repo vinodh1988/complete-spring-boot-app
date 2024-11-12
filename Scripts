@@ -1,0 +1,3 @@
+insert into computer(computer_id,brand,cpu,ram,disk) values(4,'Acer','I9','16 GB','1 TB');
+insert into computer(computer_id,brand,cpu,ram,disk) values(2,'Dell','I7','16 GB','1 TB');
+insert into computer(computer_id,brand,cpu,ram,disk) values(3,'Applie','I7','16 GB','1 TB');

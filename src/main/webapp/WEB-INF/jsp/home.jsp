@@ -8,5 +8,14 @@
 </head>
 <body>
  <h1>Spring boot Works!!!!</h1>
+ <ul>
+ 
+ <%
+ String[] names=  (String[]) request.getAttribute("names")  ;
+ for(String x:names){
+ %>
+ <li><%=x%></li>
+ <%} %>
+ </ul>
 </body>
 </html>

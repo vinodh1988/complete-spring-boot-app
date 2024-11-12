@@ -34,34 +34,34 @@ public Computer(Integer computerId, String brand, String ram, String cpu, String
 	this.disk = disk;
 }
 
-Integer getComputerId() {
+public Integer getComputerId() {
 	return computerId;
 }
-void setComputerId(Integer computerId) {
+public void setComputerId(Integer computerId) {
 	this.computerId = computerId;
 }
-String getBrand() {
+public String getBrand() {
 	return brand;
 }
-void setBrand(String brand) {
+public void setBrand(String brand) {
 	this.brand = brand;
 }
-String getRam() {
+public String getRam() {
 	return ram;
 }
-void setRam(String ram) {
+public void setRam(String ram) {
 	this.ram = ram;
 }
-String getCpu() {
+public  String getCpu() {
 	return cpu;
 }
-void setCpu(String cpu) {
+public void setCpu(String cpu) {
 	this.cpu = cpu;
 }
-String getDisk() {
+public String getDisk() {
 	return disk;
 }
-void setDisk(String disk) {
+public void setDisk(String disk) {
 	this.disk = disk;
 }
    

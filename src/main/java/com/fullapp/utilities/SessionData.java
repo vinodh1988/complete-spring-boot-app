@@ -7,13 +7,13 @@ import org.springframework.web.context.annotation.SessionScope;
 @Component
 @SessionScope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class SessionData {
-  private int count;
+  private Integer count=0;
 
-int getCount() {
+public Integer getCount() {
 	return count;
 }
 
-void setCount() {
+public void setCount() {
 	this.count++;
 }
   

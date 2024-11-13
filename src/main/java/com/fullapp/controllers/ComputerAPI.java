@@ -29,26 +29,19 @@ public class ComputerAPI {
   }
 
   @GetMapping("/{computerId}")
-  public ResponseEntity<Object> getComputer(@PathVariable Integer computerId) {
-	  try {
+  public ResponseEntity<Object> getComputer(@PathVariable Integer computerId) throws RecordNotFoundException {
+	 
 		  Computer c=cservice.getComputer(computerId);
 		  return new ResponseEntity<>(c,HttpStatus.OK);
-	  }
-	  catch(RecordNotFoundException e) {
-		  
-		  return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
-	  }
+	
   }
   @PostMapping("")
-  public ResponseEntity<Object> addComputer(@RequestBody Computer computer) {
-	  try {
+  public ResponseEntity<Object> addComputer(@RequestBody Computer computer) throws RecordAlreadyExistsException {
+	
 		  cservice.addComputer(computer);
 		  return new ResponseEntity<>(computer,HttpStatus.CREATED);
-	  }
-	  catch(RecordAlreadyExistsException e) {
-		  
-		  return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
-	  }
+	 
+	
   }
  
 }

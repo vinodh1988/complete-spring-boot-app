@@ -32,28 +32,28 @@ public Member(Integer memberid, String name, String experience) {
 	this.name = name;
 	this.experience = experience;
 }
-Integer getMemberid() {
+public Integer getMemberid() {
 	return memberid;
 }
-void setMemberid(Integer memberid) {
+public void setMemberid(Integer memberid) {
 	this.memberid = memberid;
 }
-String getName() {
+public String getName() {
 	return name;
 }
-void setName(String name) {
+public void setName(String name) {
 	this.name = name;
 }
-String getExperience() {
+public String getExperience() {
 	return experience;
 }
-void setExperience(String experience) {
+public void setExperience(String experience) {
 	this.experience = experience;
 }
-Project getProject() {
+public Project getProject() {
 	return project;
 }
-void setProject(Project project) {
+public void setProject(Project project) {
 	this.project = project;
 }
   

@@ -20,6 +20,7 @@ public class Computer {
    private String disk;
    
 
+
 public Computer() {
 	super();
 }

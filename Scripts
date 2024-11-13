@@ -1,3 +1,13 @@
 insert into computer(computer_id,brand,cpu,ram,disk) values(4,'Acer','I9','16 GB','1 TB');
 insert into computer(computer_id,brand,cpu,ram,disk) values(2,'Dell','I7','16 GB','1 TB');
 insert into computer(computer_id,brand,cpu,ram,disk) values(3,'Applie','I7','16 GB','1 TB');
+
+
+insert into projects(projectno,name,technology) values (1,'SPA','Angular');
+insert into projects(projectno,name,technology) values (2,'ERP','SAP');
+
+
+insert into members(memberid,name,experience,projectno) values(1,'Vijay','10years',1);
+insert into members(memberid,name,experience,projectno) values(2,'Nicholas','3 years',1);
+insert into members(memberid,name,experience,projectno) values(3,'Peterson','10years',2);
+insert into members(memberid,name,experience,projectno) values(4,'Kevin','5 years',1);

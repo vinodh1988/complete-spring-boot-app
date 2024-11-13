@@ -35,32 +35,32 @@ public Project(Integer projectno, String name, String technology) {
 }
 
 
-Integer getProjectno() {
+public Integer getProjectno() {
 	return projectno;
 }
-void setProjectno(Integer projectno) {
+public void setProjectno(Integer projectno) {
 	this.projectno = projectno;
 }
-String getName() {
+public String getName() {
 	return name;
 }
-void setName(String name) {
+public void setName(String name) {
 	this.name = name;
 }
-String getTechnology() {
+public String getTechnology() {
 	return technology;
 }
-void setTechnology(String technology) {
+public void setTechnology(String technology) {
 	this.technology = technology;
 }
 
 
-Set<Member> getMembers() {
+public Set<Member> getMembers() {
 	return members;
 }
 
 
-void setMembers(Set<Member> members) {
+public void setMembers(Set<Member> members) {
 	this.members = members;
 }
   

@@ -40,4 +40,17 @@ public class ComputerService {
 	    	throw new RecordAlreadyExistsException();
 	    crepo.save(computer); //generate insert
   }
+  
+  public void updateComputer(Integer computerId,Computer computer) throws RecordNotFoundException
+  {
+	    Computer c = crepo.findByComputerId(computerId);
+	    if(c==null)
+	    	throw new RecordNotFoundException();
+	    computer.setComputerId(computerId);
+	    computer.setBrand(computer.getBrand()==null?c.getBrand():computer.getBrand());
+	    computer.setCpu(computer.getCpu()==null?c.getCpu():computer.getCpu());
+	    computer.setDisk(computer.getDisk()==null?c.getDisk():computer.getDisk());
+	    computer.setRam(computer.getRam()==null?c.getRam():computer.getRam());
+	    crepo.save(computer); //generate insert
+  }
 }

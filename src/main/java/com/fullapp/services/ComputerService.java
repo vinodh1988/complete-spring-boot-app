@@ -53,4 +53,14 @@ public class ComputerService {
 	    computer.setRam(computer.getRam()==null?c.getRam():computer.getRam());
 	    crepo.save(computer); //generate insert
   }
+  
+  public void deleteComputer(Integer computerId) throws RecordNotFoundException
+  {
+	    Computer c = crepo.findByComputerId(computerId);
+	    if(c==null)
+	    	throw new RecordNotFoundException();
+	   
+
+	    crepo.delete(c); //generate insert
+  }
 }

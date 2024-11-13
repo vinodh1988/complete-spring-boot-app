@@ -57,6 +57,6 @@ public class ComputerAPI {
   public ResponseEntity<Object> deleteComputer(@PathVariable Integer computerId) throws RecordNotFoundException
   {
 	  cservice.deleteComputer(computerId);
-	  return new ResponseEntity<>("computer Updated",HttpStatus.OK);
+	  return new ResponseEntity<>("computer deleted",HttpStatus.OK);
   }
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.fullapp.entities.Computer;
 import com.fullapp.repositories.ComputerRepository;
+import com.fullapp.utilities.RecordAlreadyExistsException;
 
 import jakarta.annotation.PostConstruct;
 
@@ -23,5 +24,13 @@ public class ComputerService {
   }
   public List<Computer> getComputers() {
 	  return crepo.findAll();
+  }
+  
+  public void addComputer(Computer computer) throws RecordAlreadyExistsException
+  {
+	    Computer c = crepo.findByComputerId(computer.getComputerId());
+	    if(c!=null)
+	    	throw new RecordAlreadyExistsException();
+	    crepo.save(computer);
   }
 }

@@ -15,8 +15,11 @@ import com.fullapp.entities.Project;
 import com.fullapp.services.ProjectService;
 import com.fullapp.utilities.RecordAlreadyExistsException;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/projects")
+@Tag(name = "Project List API", description="All the operations of project entity")
 public class ProjectAPI {
    @Autowired
    ProjectService pservice;

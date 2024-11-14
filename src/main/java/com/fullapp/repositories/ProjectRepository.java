@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.fullapp.entities.Project;
 
 public interface ProjectRepository extends JpaRepository<Project, Integer>{
-
+   Project findByProjectno(Integer projectno);
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.fullapp.entities.Computer;
 import com.fullapp.services.ComputerService;
@@ -58,6 +59,9 @@ public class ComputerAPI {
   public ResponseEntity<Object> addComputer(@RequestBody Computer computer) throws RecordAlreadyExistsException {
 	
 		  cservice.addComputer(computer);
+		  RestTemplate restTemplate=new RestTemplate();
+		  String url="http://localhost:9090/api/message?message="+computer.toString();
+		  String response=restTemplate.getForObject(url, String.class);
 		  return new ResponseEntity<>(computer,HttpStatus.CREATED);
 	 
 	

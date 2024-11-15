@@ -65,6 +65,13 @@ public String getDisk() {
 public void setDisk(String disk) {
 	this.disk = disk;
 }
+
+
+@Override
+public String toString() {
+	return "Computer [computerId=" + computerId + ", brand=" + brand + ", ram=" + ram + ", cpu=" + cpu + ", disk="
+			+ disk + "]";
+}
    
    
 }
